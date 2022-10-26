@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Programação</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif
+        }
+        input{
+            border-radius: 4px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Lógica de Programação</h1>
+    <h2>Algoritimo - Exemplo - Se</h2>
+   
+    <span>Nome:</span>
+    <input type="text" id="txtnome"
+    placeholder="Digite seu nome">
+    
+    <span>Salário:</span>
+    <input type="number" placeholder=" Digite seu salário" name="txtvsal" id="txtsal"> 
+
+      <input type="button" value="Verificar" onclick="calcular()">
+      <br>
+      <br>
+      <div id="res"></div>
+
+      <script>
+      function calcular(){
+        
+          var txtms = window.document.getElementById('txtsal')
+
+          var res = window.document.querySelector('div#res')
+
+          var nome = window.document.getElementById('txtnome')
+
+          var mediaSal = Number(txtms.value)
+          var inputNome = (nome.value)
+
+          res.innerHTML = `${inputNome} seu salário é <strong> R$ ${mediaSal} </strong>.`
+
+          if(mediaSal > 1200){
+              res.innerHTML += `<p>Seu salário é maior que o salário mínimo!</p>`//é necessário colocar o += para que seja acrescentado sem que apague o comando anterior.
+          }
+         else if(mediaSal === 1200){
+              res.innerHTML+= `<p> Seu salário é igual ao salário mínimo!</p>`
+          }else{
+            res.innerHTML+= `<p>  Seu salário é inferior ao salário mínimo!</p>`
+          }
+          
+      }
+  </script>
+       
+
+        </script>
+         
+</body>
+</html>

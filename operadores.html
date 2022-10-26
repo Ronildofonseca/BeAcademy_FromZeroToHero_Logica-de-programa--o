@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Programação</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif
+        }
+    </style>
+</head>
+<body>
+    <h1>Lógica de Programação</h1>
+    <h2>Algoritimo - Exemplo - Operadores</h2>
+        
+        <script>
+
+            var nome = window.prompt('Digite o seu nome')
+
+            var salario = Number( window.prompt('Digite o seu salário'))
+
+            var menorQueMin = salario < 1200 == true
+            var maiorQueMin = salario > 1200 == true
+            var diferenteDoMin = salario != 1200 == true
+            var igualMin = salario === 1200 == true
+            var restoDiv = 5%2
+            var acimaDaMedia = (salario > 1200) || (salario < 5000) == true
+            
+
+            window.alert(`Nome: ${nome}, 
+            ${nome + "Fonseca"} 
+            Salário: ${salario}, 
+            Salário menor que o minímo : ${menorQueMin}
+            Salário maior que o mínimo:${maiorQueMin}
+            Salário diferente do mínimo: ${diferenteDoMin}
+            salário igual ao mínimo: ${igualMin}
+            Resto da divisão de 5 po 2: ${restoDiv}
+            Salário é maior que o mínimo e menor que 5000: ${acimaDaMedia}`
+            )
+           
+        </script>
+        
+</body>
+</html>

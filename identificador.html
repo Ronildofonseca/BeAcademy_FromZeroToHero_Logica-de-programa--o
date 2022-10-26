@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Programação</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif
+        }
+    </style>
+</head>
+<body>
+    <h1>Lógica de Programação</h1>
+    <h2>Algoritimo - Exemplo - Identificador</h2>
+        
+        <script>
+
+           
+
+            var nome = window.prompt('Digite o seu nome')
+
+            var idade = Number( window.prompt('Digite o sua idade'))
+
+            var maiorQue = idade > 18 == true
+            var diferenteDe = idade != 25 == true
+            var diferenteDeIgual = (idade != 25) && ( nome === "Marcos") == true
+            var diferenteOuIgual = (idade != 25) || ( nome === "Marcos") == true
+            var divisao = (idade/2 == 0) == true;
+
+           window.alert(`
+            Nome: ${nome},  
+            Idade: ${idade}, 
+            É maior de idade(18 anos) ? : ${maiorQue}
+            Sua idade é diferente de (25 anos)? : ${diferenteDe}
+            Sua idade é diferente de (25 anos) e o seu nome é igual a Marcos? : ${diferenteDeIgual}
+            Sua idade é diferente de (25 anos) ou o seu nome é igual a Marcos? : ${diferenteOuIgual}
+            Sua idade é ${idade} anos, dividindo esta por 2, é igual a zero? : ${divisao}
+            `)
+            
+           
+        </script>
+        
+</body>
+</html>
