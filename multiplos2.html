@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Programação</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        section{
+            background-color: yellow;
+            border-radius: 10px;
+            padding: 15px;
+            width: 500px;
+            margin: auto;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.233)
+        }
+        p{
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Lógica de Programação</h1>
+    <h2>Algoritimo - Exemplo - Múltiplos de 2</h2>
+    <section>
+        <div>
+            <p>Digite o número:</p>
+            <input name="num" id="txtn" type="number">
+            <input type="button" value="Gerar Tabuada" onclick="tabuada()"></p>
+        </div>
+
+        <div> 
+            <select name="tabuada" id="seltab" size="10"><option>Tabuada de multiplicação</option></select></div>
+    </section>
+
+      <script>
+            function tabuada(){
+                let num = document.getElementById('txtn')
+                let tab = document.getElementById('seltab')
+                if(num.value.length == 0){ window.alert('Por favor, digite um número!')} else{
+                let n = Number(num.value)
+
+                tab.innerHTML = ''
+                for(let j = 2; j <= 100; j++){
+                let item = document.createElement('option')
+                item.text = `${n} x ${j} = ${n*j}`
+                item.value = `tab ${n}`
+                tab.appendChild(item)
+                j++ }
+            
+                }    
+            }
+       
+        </script>
+       
+         
+</body>
+</html>

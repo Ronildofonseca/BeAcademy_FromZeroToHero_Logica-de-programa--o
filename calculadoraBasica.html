@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Programação</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif
+        }
+        input{
+            border-radius: 4px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Lógica de Programação</h1>
+    <h2>Algoritimo - Exemplo - Calculadora Básica</h2>
+        <div>   
+            <span>Primeiro número:</span>
+            <input type="number" placeholder=" Digite o número" name= "numIni" id="numIni"> 
+
+            <span>Escolha a operação:</span>
+            <input type="text" placeholder=" Digite a operação" name= "operEsc" id="operEsc"> 
+
+            <span>Segundo Valor:</span>
+            <input type="number" placeholder=" Digite o número" name= "segNum" id="segNum"> 
+
+            <input type="button" value="Verificar" onclick="calcular()">
+            <div id="res"></div>
+        </div>
+
+      <script>
+      function calcular(){
+        
+          var numeroInicial = window.document.getElementById('numIni')
+          var operEscolhida = window.document.getElementById('operEsc')
+          var SegundoNumero = window.document.getElementById('segNum')
+
+          var res = window.document.querySelector('div#res')
+
+          var valorTransf1 = Number(numeroInicial.value)
+          var operTransf2 = String (operEscolhida.value)
+          var valorTransf3 = Number(SegundoNumero.value)
+
+          switch(operTransf2){
+            case ('+'): res.innerHTML =`A soma de ${valorTransf1} + ${valorTransf3} é igual à ${valorTransf1 + valorTransf3} !`
+            break
+            case ('-'): res.innerHTML =`A subtração de ${valorTransf1} - ${valorTransf3} é igual à ${valorTransf1 - valorTransf3} !`
+            break
+            default: res.innerHTML =`-1`
+            break
+
+          }
+          if(res.innerHTML === "-1"){
+            res.innerHTML = `Operação inválida, digite + ou - !`
+          } else{ };
+          
+          
+      }
+  </script>
+       
+         
+</body>
+</html>

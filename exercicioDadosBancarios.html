@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Programação</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+           
+        }
+        input{
+            border-radius: 4px;  
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Lógica de Programação</h1>
+    <h2>Algoritimo - Exemplo - Movimentação Bancária</h2>
+        <div>   
+            <span>Valor Inicial:</span>
+            <input type="number" placeholder=" Digite o valor" name= "valorini" id="valorini"> 
+
+            <span>Valor à Movimentar:</span>
+            <input type="number" placeholder=" Digite o valor" name= "valorMovi" id="valorMovi"> 
+            <br>
+            <br>
+            <span>Digite "D"(Depósito) "S"(Saque) "T"(Transf.):</span>
+            <input type="text" placeholder=" Digite a opção desejada" name= "opInfo" id="opInfo"> 
+            <br> 
+            <br>
+            <span> Transferência: Digite o Banco, Agência e conta:</span>
+            <input type="text" placeholder=" Digite os dados" name= "dadosInfo" id="dadosInfo" class="dadosInfo" >
+            <br>
+            <br>
+
+            <input type="button" value="Verificar" onclick="calcular()">
+            <br>
+            <br>
+            <div
+             id="res"></div>
+        </div>
+
+      <script>
+      function calcular(){
+        
+          var valorInicial = window.document.getElementById('valorini')
+          var valorMovimentado = window.document.getElementById('valorMovi')
+          var opcaoInformada = window.document.getElementById('opInfo')
+          var dadosInfor = window.document.getElementById('dadosInfo')
+        
+          var res = window.document.querySelector('div#res')
+
+          var valorModif1 = Number(valorInicial.value)
+          var valorModif2 = Number(valorMovimentado.value)
+          var opcModif3 = String(opcaoInformada.value)
+          var dadosBanc =(dadosInfor.value)
+          
+
+
+          switch(opcModif3){
+              case ("D"):  res.innerHTML = `<p>Seu saldo inicial era ${valorModif1}, porém você depositou ${valorModif2}, seu saldo atual é ${valorModif1 + valorModif2}!</p>`
+              break
+              case ("S"): res.innerHTML = `<p>Seu saldo inicial era ${valorModif1}, porém você sacou ${valorModif2}, seu saldo atual é ${valorModif1 - valorModif2}!</p>`
+              break
+              case ("T"): res.innerHTML = `Digite os dados no campo indicado!
+              <p>Seu saldo inicial era ${valorModif1}, porém você transferiu o valor de ${valorModif2} para ${dadosBanc}, seu saldo atual é ${valorModif1 - valorModif2}!`
+              break
+              default:`Operação inválida`
+              break
+            }
+           
+          }
+          
+      
+  </script>
+       
+         
+</body>
+</html>
