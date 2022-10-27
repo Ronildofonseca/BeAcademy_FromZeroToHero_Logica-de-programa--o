@@ -19,7 +19,7 @@
 </head>
 <body>
     <h1>Lógica de Programação</h1>
-    <h2>Algoritimo - Exemplo - Se</h2>
+    <h2>Algoritimo - Exemplo - Classificação IMC</h2>
         <div>
             <span>Peso:</span>
             <input type="number" placeholder=" Digite seu Peso" name= "txtpeso" id="txtpeso"> 
@@ -48,14 +48,14 @@
           res.innerHTML = `Seu peso é ${pesoTransf} e sua altura é ${altTransf}. O resultado do calculo do seu IMC é ${resultICM}!`
 
           if(resultICM < 19){
-              res.innerHTML += `<p>Você está abaixo do peso!</p>`//é necessário colocar o += para que seja acrescentado sem que apague o comando anterior.
-          }
-         else if(resultICM >= 19.1 < 25){
-              res.innerHTML+= `<p> Seu peso está normal!</p>`
-          }else if(resultICM >= 25.1 < 30){
-              res.innerHTML+= `<p> Você está com sobrepeso!</p>`
-            }else if(resultICM >= 30.1 < 40){
-              res.innerHTML+= `<p> Você está com obesidade tipo 1!</p>`} else{
+              res.innerHTML += `<p>Você está abaixo do peso!</p>`}//é necessário colocar o += para que seja acrescentado sem que apague o comando anterior.
+            else if(19.1 <= resultICM, resultICM < 25){
+              res.innerHTML+= `<p> Seu peso está normal!</p>`}
+            else if(25.1 >= resultICM, resultICM < 30){
+              res.innerHTML+= `<p> Você está com sobrepeso!</p>` }
+            else if(30.1 >= resultICM, resultICM < 40){
+              res.innerHTML+= `<p> Você está com obesidade tipo 1!</p>`} 
+            else{
             res.innerHTML+= `<p>  Você está com obesidade mórbida!</p>`
           }
           
