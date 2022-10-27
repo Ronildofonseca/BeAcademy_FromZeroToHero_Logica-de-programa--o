@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Programação</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif
+        }
+        input{
+            border-radius: 4px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Lógica de Programação</h1>
+    <h2>Algoritimo - Exemplo - Movimentação Bancária</h2>
+        <div>   
+            <span>Valor Inicial:</span>
+            <input type="number" placeholder=" Digite o valor" name= "valorini" id="valorini"> 
+
+            <span>Valor do Deposito:</span>
+            <input type="number" placeholder=" Digite o valor" name= "valorDep" id="valorDep"> 
+
+            <span>Valor do Saque:</span>
+            <input type="number" placeholder=" Digite o valor" name= "valorSaq" id="valorSaq"> 
+
+            <input type="button" value="Verificar" onclick="calcular()">
+            <div id="res"></div>
+        </div>
+
+      <script>
+      function calcular(){
+        
+          var valorInicial = window.document.getElementById('valorini')
+          var valorDeposito = window.document.getElementById('valorDep')
+          var valorSaque = window.document.getElementById('valorSaq')
+
+          var res = window.document.querySelector('div#res')
+
+          var valorTransf1 = Number(valorInicial.value)
+          var valorTransf2 = Number(valorDeposito.value)
+          var valorTransf3 = Number(valorSaque.value)
+
+          if(valorTransf1 != 0, valorTransf2 != 0){
+              res.innerHTML = `<p>Seu saldo inicial era ${valorTransf1}, porém você depositou ${valorTransf2}, seu saldo atual é ${valorTransf1 + valorTransf2}!</p>`}
+            else if(valorTransf1 != 0, valorTransf3 != 0){
+              res.innerHTML+= `<p>Seu saldo inicial era ${valorTransf1}, porém você sacou ${valorTransf3}, seu saldo atual é ${valorTransf1 - valorTransf3}!</p>`}
+            else{
+            res.innerHTML+= `<p>  Você não tem nada em conta!</p>`
+          }
+          
+      }
+  </script>
+       
+         
+</body>
+</html>
