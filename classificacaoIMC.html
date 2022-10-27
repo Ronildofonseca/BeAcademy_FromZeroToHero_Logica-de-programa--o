@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Programação</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif
+        }
+        input{
+            border-radius: 4px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Lógica de Programação</h1>
+    <h2>Algoritimo - Exemplo - Se</h2>
+        <div>
+            <span>Peso:</span>
+            <input type="number" placeholder=" Digite seu Peso" name= "txtpeso" id="txtpeso"> 
+
+            <span>Altura:</span>
+            <input type="number" placeholder=" Digite sua Altura" name="txtalt" id="txtalt"> 
+
+            <input type="button" value="Verificar" onclick="calcular()">
+            <br>
+            <br>
+            <div id="res"></div>
+        </div>
+
+      <script>
+      function calcular(){
+        
+          var pesoInfo = window.document.getElementById('txtpeso')
+          var altInfo = window.document.getElementById('txtalt')
+
+          var res = window.document.querySelector('div#res')
+
+          var pesoTransf = Number(pesoInfo.value)
+          var altTransf = Number(altInfo.value)
+          var resultICM = pesoTransf/(altTransf*altTransf)
+
+          res.innerHTML = `Seu peso é ${pesoTransf} e sua altura é ${altTransf}. O resultado do calculo do seu IMC é ${resultICM}!`
+
+          if(resultICM < 19){
+              res.innerHTML += `<p>Você está abaixo do peso!</p>`//é necessário colocar o += para que seja acrescentado sem que apague o comando anterior.
+          }
+         else if(resultICM >= 19.1 < 25){
+              res.innerHTML+= `<p> Seu peso está normal!</p>`
+          }else if(resultICM >= 25.1 < 30){
+              res.innerHTML+= `<p> Você está com sobrepeso!</p>`
+            }else if(resultICM >= 30.1 < 40){
+              res.innerHTML+= `<p> Você está com obesidade tipo 1!</p>`} else{
+            res.innerHTML+= `<p>  Você está com obesidade mórbida!</p>`
+          }
+          
+      }
+  </script>
+       
+
+        </script>
+         
+</body>
+</html>
