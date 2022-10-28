@@ -30,7 +30,7 @@
 </head>
 <body>
     <h1>Lógica de Programação</h1>
-    <h2>Algoritimo - Exemplo - Múltiplos de 3</h2>
+    <h2>Algoritimo - Exemplo - Tabuada com  Estrutura de Repetição While</h2>
     <section>
         <div>
             <p>Digite o número:</p>
@@ -43,29 +43,22 @@
     </section>
 
       <script>
-
-        //VER EM AULA O QUE SE PODE FAZER
-
-        
-           /* function tabuada(){
-                let num = document.getElementById('txtn')
-
-                let tab = document.getElementById('seltab')
-
-                if(num.value.length == 0){ window.alert('Por favor, digite um número!')} else{
-                let n = Number(num.value)
-                tab.innerHTML = ''
-               
-                for(let j = 1; j <= 100; j++){
-                let item = document.createElement('option')
-                item.text = `${n} x ${j} = ${n*j}`
-                item.value = `tab ${n}`
-                tab.appendChild(item)
-                j++ }
-            
-                }    
-            }*/
-       
+        function tabuada(){
+            let num = document.getElementById('txtn')
+            let tab = document.getElementById('seltab')
+            if(num.value.length == 0){ window.alert('Por favor, digite um número!')} else{
+            let n = Number(num.value)
+            let c = 1
+            tab.innerHTML = ''
+            while (c <= 10){
+            let item = document.createElement('option')
+            item.text = `${n} x ${c} = ${n*c}`
+            item.value = `tab ${c}`
+            tab.appendChild(item)
+            c++}
+                
+            }
+        }
         </script>
        
          

@@ -50,7 +50,7 @@
                 let n = Number(num.value)
 
                 tab.innerHTML = ''
-                for(let j = 2; j <= 100; j++){
+                for(let j = 2; j <= 100; j++){ if(j%3 == 0)
                 let item = document.createElement('option')
                 item.text = `${n} x ${j} = ${n*j}`
                 item.value = `tab ${n}`

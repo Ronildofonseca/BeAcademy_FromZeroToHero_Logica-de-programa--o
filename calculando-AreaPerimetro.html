@@ -23,9 +23,10 @@
         <div>   
 
             <span>Digite "Q" para quadrado e "T" para triângulo:</span>
-            <input type="text" placeholder=" Digite a sua opção" name= "opInfo" id="opInfo">  
+            <input type="text" placeholder=" Digite a sua opção" name= "opInfo" id="opInfo">  <br>
             <span>Digite o valor da área em cm:</span>
             <input type="number" placeholder=" Digite o valor do cm" name= "valorInfo" id="valorInfo">  
+            <br>
 
             <input type="button" value="Verificar" onclick="calcular()">
             <div id="res"></div>
@@ -45,7 +46,7 @@
 
           var areaQ = valorTransf*valorTransf
           var perimtQ = valorTransf * 4
-          var areaTria = valorTransf * valorTransf/ 2
+          var areaTria = (valorTransf * valorTransf) / 2
           var perimetTria = valorTransf * 3
 
           switch(opTransf){
