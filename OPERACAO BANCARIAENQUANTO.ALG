@@ -1,4 +1,4 @@
-Algoritmo "Operacao Bancaria com limite de movimentacao"
+Algoritmo "Operacao BancariaEnquanto"
 //
 //
 //
@@ -8,18 +8,20 @@ Algoritmo "Operacao Bancaria com limite de movimentacao"
 Var
    // Variaveis para saldo, valor da transacao, tipo de transacao, Quantidade de movimentação(qtd) e contador(i)
    saldo, valor: real
-   transacao, banco, agencia, conta: caractere
-   qtd, i: inteiro
+   transacao, banco, agencia, conta, continuar: caractere
+
 
 Inicio
    // Solicita saldo inicial e numero de transacoes
    escreva("Digite seu saldo inicial: ")
    leia(saldo)
-   escreva("Digite a quantidade de movimentacões: ")
-   leia(qtd)
+
+
+   //Para fazer continuar fazendo operação
+   continuar <- "S
 
    // Analize de movimentação
-   para i de 1 ate qtd faca
+   enquanto (continuar) = "S" faca
       // Iniciando transação
       escreval()
       escreva("Digite o valor da transacao: ")
@@ -28,7 +30,9 @@ Inicio
       escreval("Digite D(Deposito)")
       escreval("Digite S(Saldo) ")
       escreval("Digite T(Transferência)")
+      escreval("Digite E(Emprestimo)")
       escreva("Tipo de transacao: ")
+
       leia(transacao)
 
 
@@ -49,26 +53,40 @@ Inicio
       escolha transacao
       caso "D"
          saldo <- saldo + valor
-         escreval("seu saldo inicial era ", saldoIni,  "porém foi feito um depósito no valor de: R$", valor)
-         escreval("Seu saldo agora é: R$", saldo)
+         escreval("Você fez um depposito no valor de: R$", valor)
+         escreval("Seu saldo atual é: R$", saldo)
       caso "S"
          saldo <- saldo - valor
-         escreval("Seu saldo inicial era ", saldoIni,  "porém foi feito um saque no valor de: R$", valor)
-         escreval("Seu saldo agora é: R$", saldo)
+         escreval("Você fez um saque no valor de: R$", valor)
+         escreval("Seu saldo atual é: R$", saldo)
       caso "T"
          saldo <- saldo - valor
-         escreval("seu saldo inicial era ", saldoIni,  "porém foi feito uma trasnferência no valor de: R$", valor)
-         escreval("Seu saldo agora é: R$", saldo)
+         escreval("Você fez uma transferencia no valor de : R$", valor)
+         escreval("Seu saldo atual é: R$", saldo)
          escreval()
          escreval("Conta de destino:")
          escreval("Banco: ", banco)
          escreval("Agencia: ", agencia)
          escreval("Conta: ", conta)
+
+      caso "E"
+         saldo <- saldo + valor
+         escreval("Você fez um empréstimo no valor de: R$", valor)
+         escreval("Seu saldo atual é : R$", saldo)
       outrocaso
-         escreval("Transacao invalida Digite D,S ou T para movimentações!")
+         escreval("Transacao invalida Digite D,S,T ou E para movimentações!")
          escreval("Saldo: R$", saldo)
       fimescolha
-   fimpara
+
+      // Pergunta se usuario quer realizar mais transacoes
+      escreval()
+      escreval("Deseja realizar outra transacao:")
+      escreval("Digite S para sim")
+      escreval("Digite N para nao")
+      escreva("Opcao: ")
+      leia(continuar)
+   fimenquanto
+
 
    // Saldo final
    escreval()

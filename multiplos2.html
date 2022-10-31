@@ -10,6 +10,7 @@
             background-color: black;
             color: white;
             font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
             
         }
         section{
@@ -25,6 +26,12 @@
             font-size: 20px;
             font-weight: bold;
         }
+        select{
+            width: 100px;
+            text-align: center;
+            font-weight:bold;
+
+        }
 
     </style>
 </head>
@@ -32,33 +39,31 @@
     <h1>Lógica de Programação</h1>
     <h2>Algoritimo - Exemplo - Múltiplos de 2</h2>
     <section>
-        <div>
-            <p>Digite o número:</p>
-            <input name="num" id="txtn" type="number">
-            <input type="button" value="Gerar Tabuada" onclick="tabuada()"></p>
-        </div>
 
         <div> 
-            <select name="tabuada" id="seltab" size="10"><option>Tabuada de multiplicação</option></select></div>
+            <input type="button" value="Gerar Multiplos" onclick="multiplo()"></p>
+            <select name="tabuada" id="seltab" size="10"><option>Multiplos de 2 a 100</option>
+            </select>
+
+        </div>''
     </section>
 
       <script>
-            function tabuada(){
-                let num = document.getElementById('txtn')
+            function multiplo(){
                 let tab = document.getElementById('seltab')
-                if(num.value.length == 0){ window.alert('Por favor, digite um número!')} else{
-                let n = Number(num.value)
-
+              
                 tab.innerHTML = ''
-                for(let j = 2; j <= 100; j++){ if(j%3 == 0)
+                
+                for(let j = 2; j <= 100; j++){
                 let item = document.createElement('option')
-                item.text = `${n} x ${j} = ${n*j}`
-                item.value = `tab ${n}`
+                item.text = `${j}`
+                item.value = `tab ${j}`
                 tab.appendChild(item)
                 j++ }
-            
-                }    
             }
+        
+                  
+            
        
         </script>
        
