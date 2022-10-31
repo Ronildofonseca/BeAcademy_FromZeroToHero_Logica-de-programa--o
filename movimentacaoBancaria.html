@@ -23,13 +23,14 @@
         <div>   
             <span>Valor Inicial:</span>
             <input type="number" placeholder=" Digite o valor" name= "valorini" id="valorini"> 
-
+            <br>
+    
             <span>Valor do Deposito:</span>
             <input type="number" placeholder=" Digite o valor" name= "valorDep" id="valorDep"> 
-
+            <br>
             <span>Valor do Saque:</span>
             <input type="number" placeholder=" Digite o valor" name= "valorSaq" id="valorSaq"> 
-
+            <br>
             <input type="button" value="Verificar" onclick="calcular()">
             <div id="res"></div>
         </div>
@@ -46,11 +47,14 @@
           var valorTransf1 = Number(valorInicial.value)
           var valorTransf2 = Number(valorDeposito.value)
           var valorTransf3 = Number(valorSaque.value)
+         
 
-          if(valorTransf1 != 0, valorTransf2 != 0){
+          if(valorTransf2 != 0 && valorTransf3 !=0){
+              res.innerHTML+= `Só é possível fazer uma transação de cada vez!`}
+          else if(valorTransf1 != 0, valorTransf2 != 0){
               res.innerHTML = `<p>Seu saldo inicial era ${valorTransf1}, porém você depositou ${valorTransf2}, seu saldo atual é ${valorTransf1 + valorTransf2}!</p>`}
             else if(valorTransf1 != 0, valorTransf3 != 0){
-              res.innerHTML+= `<p>Seu saldo inicial era ${valorTransf1}, porém você sacou ${valorTransf3}, seu saldo atual é ${valorTransf1 - valorTransf3}!</p>`}
+                res.innerHTML = `<p>Seu saldo inicial era ${valorTransf1}, porém você sacou ${valorTransf3}, seu saldo atual é ${valorTransf1 - valorTransf3} !</p>`}
             else{
             res.innerHTML+= `<p>  Você não tem nada em conta!</p>`
           }

@@ -45,7 +45,7 @@
           var altTransf = Number(altInfo.value)
           var resultICM = pesoTransf/(altTransf*altTransf)
 
-          res.innerHTML = `Seu peso é ${pesoTransf} e sua altura é ${altTransf}. O resultado do calculo do seu IMC é ${resultICM}!`
+          res.innerHTML = `Seu peso é ${pesoTransf} e sua altura é ${altTransf}. <br> O resultado do calculo do seu IMC é ${resultICM}!`
 
           if(resultICM < 19){
               res.innerHTML += `<p>Você está abaixo do peso!</p>`}//é necessário colocar o += para que seja acrescentado sem que apague o comando anterior.
